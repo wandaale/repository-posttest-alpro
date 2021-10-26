@@ -1,0 +1,56 @@
+def menu() :
+
+    print ("==========Menu===========")
+    print ("[1] Masukkan Data")
+    print ("[0] Exit")
+
+def data() :
+
+    list_nama = []
+    list_nim = []
+    list_prodi = []
+    list_fakultas = []
+    list_ipk = []
+
+    
+    ulang = int(input("Banyak Data Mahasiswa : "))
+    for i in range (ulang):
+        print ("Data ke - " + str(i+1))
+        list_nama.append(input("Masukkan Nama = "))
+        list_nim.append(int(input("Masukkan NIM = ")))
+        list_prodi.append(input("Masukkan Prodi = "))
+        list_fakultas.append(input("Masukkan Fakultas = "))
+        list_ipk.append(float(input("Masukkan IPK = ")))
+
+    print ()
+    print ("=================================================DATA MAHASISWA=========================================================")
+    print ("|         Nama          |             NIM               |         Prodi         |        Fakultas        |     IPK     |")
+    print ("========================================================================================================================")
+    for i in range (ulang) :
+        print("|\t  %s     \t|\t      %i      \t|       %s     |         %s         |   %f  |" %(list_nama[i], list_nim[i], list_prodi[i], list_fakultas[i], list_ipk[i]))
+    print ("========================================================================================================================")
+
+# Program
+
+menu ()
+
+pilih = int(input("Masukkan Menu : "))
+
+while pilih != 0:
+    if pilih == 1:
+        data()
+    else: 
+        print("Salah Input")
+
+    print()
+    print ("Ingin Mendata lagi ? (y/n) : ")
+    back = input("Pilih : ")
+    if back == ("y") :
+        print()
+        menu()
+        pilih = int(input("Masukkan Menu : "))
+    else :
+        print ("end")
+        exit()
+
+print("thank you")
