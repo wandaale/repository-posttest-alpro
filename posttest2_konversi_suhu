@@ -1,0 +1,26 @@
+print ('====Konversi Suhu====')
+x = input ('Masukkan suhu awal: ')
+y = input ('Masukkan satuan tujuan: ')
+a = x[len(x)-1]
+x = float(x[:len(x)-1])
+
+if (a=='F'):
+    if (y=='F'):
+        y = x
+    elif (y=='C'):
+        y =  (x-32)*5/9
+
+if (a=='K'):
+    if (y=='K'):
+        y = x
+    elif (y=='C'):
+        y = x-273.15
+
+if (a=='R'):
+    if (y=='R'):
+        y = x
+    elif (y=='C'):
+        y = x/0.8
+
+print (y)
+
